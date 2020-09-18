@@ -41,6 +41,7 @@ sudo apt install -y git curl
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh # download the installation script
 bash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda3
 rm Miniconda3-latest-Linux-x86_64.sh # remove after installation
+source $HOME/miniconda3/bin/activate # modify shell scripts to add conda to PATH (~/.bashrc file)
 conda init # Initialize Miniconda3
 
 
