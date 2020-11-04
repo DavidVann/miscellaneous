@@ -13,17 +13,17 @@ sudo apt install -y build-essential dkms
     # build-essential -> packages necessary for compiling Debian packages
     # dkms -> Dynamic Kernal Module Support package, needed for compiling external kernal modules
 
-wget https://download.virtualbox.org/virtualbox/6.1.14/VBoxGuestAdditions_6.1.14.iso
+wget https://download.virtualbox.org/virtualbox/6.1.16/VBoxGuestAdditions_6.1.16.iso
     # wget -> utility for downloading files from the internet
 sudo mkdir /media/VBoxGuestAdditions
     # mkdir -> make directory
-sudo mount -o loop,ro VBoxGuestAdditions_6.1.14.iso /media/VBoxGuestAdditions
+sudo mount -o loop,ro VBoxGuestAdditions_6.1.16.iso /media/VBoxGuestAdditions
     # -o -> options flag
     # loop -> mount as loop device (mounts a file which contains a file system, so that it can be interacted with in the file system of the OS)
     # ro -> read-only
 sudo sh /media/VBoxGuestAdditions/VBoxLinuxAdditions.run 
     # sh -> run as shell command
-rm VBoxGuestAdditions_6.1.14.iso 
+rm VBoxGuestAdditions_6.1.16.iso 
     # rm -> delete file
 sudo umount /media/VBoxGuestAdditions 
     # umount -> detach file system from file system of OS
@@ -53,10 +53,10 @@ echo y | conda create -n dsci pandas matplotlib scikit-learn jupyterlab seaborn 
 
 ## R and RStudio
 sudo apt install -y r-base
-wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.1073-amd64.deb
-sudo dpkg -i rstudio-1.3.1073-amd64.deb
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.1093-amd64.deb
+sudo dpkg -i rstudio-1.3.1093-amd64.deb
 sudo apt -f install -y # fix any missing depencies (-f == --fix-broken)
-rm rstudio-1.3.1073-amd64.deb
+rm rstudio-1.3.1093-amd64.deb
 
 ### Install useful R packages
 sudo apt install -y libxml2-dev libssl-dev libcurl4-openssl-dev # dependencies for tidyverse
