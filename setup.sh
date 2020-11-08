@@ -34,8 +34,8 @@ sudo rmdir /media/VBoxGuestAdditions
 # Install Software
 
 ## Useful packages
-sudo apt install -y git curl
-    # install the git and curl packages
+sudo apt install -y git curl texlive-latex-extra texlive-xetex
+    # install the git and curl packages and fairly comprehensive LaTeX packages
 
 ## Miniconda (minimal installation of anaconda)
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh # download the installation script
